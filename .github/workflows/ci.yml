@@ -1,0 +1,26 @@
+name: github pages
+on: 
+  push:
+    branches:
+    - blazor
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@master
+
+    - name: setup dotnet core
+      uses: actions/setup-dotnet@master
+      with:
+        dotnet-version: 3.0.100
+
+    - name: build
+      run: dotnet publish -c Release -o ./bin/publish
+    
+    - name: deploy
+      uses: peaceiris/actions-gh-pages@master
+      env:
+        PERSONAL_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        PUBLISH_BRANCH: master
+        PUBLISH_DIR: ./bin/publish/gohopo.github.io/dist
