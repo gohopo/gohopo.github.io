@@ -1,10 +1,6 @@
 ﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
-html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-a, .btn-link {
+btn-link {
     color: #0366d6;
 }
 
@@ -14,62 +10,12 @@ a, .btn-link {
     border-color: #1861ac;
 }
 
-app {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-
-.top-row {
-    height: 3.5rem;
-    display: flex;
-    align-items: center;
-}
-
-.app-main {
-    flex: 1;
-}
-
-    .app-main .top-row {
-        background-color: #f7f7f7;
-        border-bottom: 1px solid #d6d5d5;
-        justify-content: flex-end;
-    }
-
-        .app-main .top-row > a, .app-main .top-row .btn-link {
-            white-space: nowrap;
-            margin-left: 1.5rem;
-        }
-
-        .app-main .top-row a:first-child {
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-.app-sidebar {
-    background-color: #EDEEF5;
-}
-
-    .app-sidebar .top-row {
-        
-    }
-
-    .app-sidebar .navbar-brand {
-        font-size: 1.1rem;
-        color: #2C3041;
-    }
 
     .app-sidebar .oi {
-        width: 2rem;
-        font-size: 1.1rem;
-        vertical-align: text-top;
+
         top: -2px;
     }
 
-    .app-sidebar .nav-item {
-        font-size: 0.9rem;
-        padding-bottom: 0.5rem;
-    }
 
         .app-sidebar .nav-item:first-of-type {
             padding-top: 1rem;
@@ -80,11 +26,7 @@ app {
         }
 
         .app-sidebar .nav-item a {
-            color: #A4A4B1;
-            border-radius: 4px;
-            height: 3rem;
-            display: flex;
-            align-items: center;
+
             line-height: 3rem;
         }
 
@@ -101,40 +43,6 @@ app {
     padding-top: 1.1rem;
 }
 
-.navbar-toggler {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.valid.modified:not([type=checkbox]) {
-    outline: 1px solid #26b050;
-}
-
-.invalid {
-    outline: 1px solid red;
-}
-
-.validation-message {
-    color: red;
-}
-
-#blazor-error-ui {
-    background: lightyellow;
-    bottom: 0;
-    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
-    display: none;
-    left: 0;
-    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-}
-
-    #blazor-error-ui .dismiss {
-        cursor: pointer;
-        position: absolute;
-        right: 0.75rem;
-        top: 0.5rem;
-    }
 
 @media (max-width: 767.98px) {
     .app-main .top-row:not(.auth) {
